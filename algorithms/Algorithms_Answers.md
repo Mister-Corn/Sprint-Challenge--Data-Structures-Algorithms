@@ -131,7 +131,9 @@ function quicksort(array)
 a)   Suppose we implement quicksort so that the pivot is always chosen to be the first element of the array.
 What is the running time of this algorithm on an input array that is already sorted?  Why?
 
-Assuming concatenation has no runtime implication, the runtime complexity will O(n log n). The `n` because we have to iterate through the whole array. The `log n` because we will have to do subsequent iterations with the recursive call to quicksort, but `n` will be shorter each time. In an already sorted array, only `quicksort(greater)` will be called.
+<del>Assuming concatenation has no runtime implication, the runtime complexity will O(n log n). The `n` because we have to iterate through the whole array. The `log n` because we will have to do subsequent iterations with the recursive call to quicksort, but `n` will be shorter each time. In an already sorted array, only `quicksort(greater)` will be called.</del>
+
+Note: O(n<sup>2</sup>)
 
 b)   Suppose we implement quicksort so that the pivot is always magically chosen to be the median element
 of the array.  What is the running time of this algorithm?  Why?
