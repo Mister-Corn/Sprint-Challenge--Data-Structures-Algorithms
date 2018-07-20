@@ -96,16 +96,13 @@ O(n). Linear recursion, right?
 
 a)   Given an array `a` of `n` numbers, design a linear running time algorithm to find the maximum value of `a[j] - a[i]`, where `j ≥ i`.
 
-```py
-def find_max(a):
-  n = len(a)
-  prev = None
-  mi_max = None
+```
+minVal = a[0]
+maxDiff = 0
 
-  for i in range(n):
-    curr = a[i] - prev
-
-    mi_max = max(curr, prev)
+for i in 1..n
+  minVal = min(minVal, a[i])
+  maxDiff = max(maxDiff, a[i] - minVal)
 ```
 
 b) Suppose that you have an `n`-story building and plenty of eggs.  Suppose also that an egg is broken if it is thrown off floor `f` or higher, and unbroken otherwise.  Devise a strategy to determine the value of `f` such that the number of dropped eggs is minimized.
@@ -113,6 +110,8 @@ b) Suppose that you have an `n`-story building and plenty of eggs.  Suppose also
 ...? `f` should be as large as possible so that the eggs will not break on any floor. It might best that the value of `f` should be ∞, but at least given that `c` is the current floor we're on, have `f` be `f > c`.
 
 If `n` bounds the maximum value of `f`, then `f` should simply be `n`. 
+
+Note: You misunderstood the question. `f` is unknown. It's asking to find a strategy to find `f`.
 
 ## Exercise III.
 
