@@ -6,9 +6,9 @@ def heapsort(arr):
     mi_heap.insert(n)
      
   while mi_heap.get_size() > 0:
-    mi_answer.insert(0, mi_heap.delete())
+    mi_answer.append(mi_heap.delete())
   
-  return mi_answer
+  return list(reversed(mi_answer))
 
 class Heap:
   def __init__(self):

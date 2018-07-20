@@ -34,6 +34,10 @@ Not sure how we add all of these together and classify them together. The big st
 
 But because the insertion is there, it's worse than O(n log n). O(n<sup>2</sup> log n)???
 
+**EDIT**
+
+I just now append to the list (O(1)), then reverse it in the end (O(1)). I'm reckoning this brings it down to its expected complexity O(n log n).
+
 6. What is the space complexity of the `heapsort` function? Recall that your implementation should return a new array with the sorted data. What would be the space complexity if your function instead altered the input array?
 
 Not sure space complexity changes. We need to build a heap regardless, so it will always be at least O(n) space complexity. Whether we change the input array or build a new one, the heap gets smaller with every deletion. If you change the array in place, the memory used will become smaller, but you had to use up O(n) in the first place.
