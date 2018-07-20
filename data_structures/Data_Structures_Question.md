@@ -24,6 +24,18 @@ With that said, the list gets bigger when the tree is bigger, so I think O(log n
 
 5. What is the runtime complexity of your `heapsort` function?
 
+My heap sort needs to add each element in the list to the heap. This is O(log n).
 
+I then need to delete each node in the heap. The deletion is also O(log n). The return value of the deletion is then inserted into the first position of the answer list. That insertion is O(n). Finally, we need to do this as many times as there are nodes. 
+
+So we have insertion of O(log n), and a loop O(n) that does an O(log n) deletion and an O(n) insertion into list each iteration.
+
+Not sure how we add all of these together and classify them together. The big stickler is the insertion to the list. If we had a min heap, appending to the list would be O(1), and thus we can throw that out the window.
+
+But because the insertion is there, it's worse than O(n log n). O(n<sup>2</sup> log n)???
 
 6. What is the space complexity of the `heapsort` function? Recall that your implementation should return a new array with the sorted data. What would be the space complexity if your function instead altered the input array?
+
+Not sure space complexity changes. We need to build a heap regardless, so it will always be at least O(n) space complexity. Whether we change the input array or build a new one, the heap gets smaller with every deletion. If you change the array in place, the memory used will become smaller, but you had to use up O(n) in the first place.
+
+In contrast, if you build a new array, the heap gets smaller as the new array gets bigger. In the end, you'll just end up with an O(n) classification anyways.

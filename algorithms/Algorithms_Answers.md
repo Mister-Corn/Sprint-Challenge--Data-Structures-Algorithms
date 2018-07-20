@@ -23,6 +23,7 @@ while (array[i] > x && i >= 0)
   i = i/2;
 ```
 
+Unless `array[i] <= x` stops the loop, I think this will go on forever, because I will never be less than 0. Can we classify this O(∞), for that's its worst case?
 
 ### c)
 
@@ -89,22 +90,6 @@ O(n). Linear recursion, right?
 
 a)   Given an array `a` of `n` numbers, design a linear running time algorithm to find the maximum value of `a[j] - a[i]`, where `j ≥ i`.
 
-1 2 3
-
-1 - 1
-2 - 1
-3 - 1
-2 - 2
-3 - 2
-3 - 3
-
-3 - 3
-3 - 2
-3 - 1
-2 - 2
-2 - 1
-1 - 1
-
 ```py
 def find_max(a):
   n = len(a)
@@ -119,7 +104,10 @@ def find_max(a):
 
 b) Suppose that you have an `n`-story building and plenty of eggs.  Suppose also that an egg is broken if it is thrown off floor `f` or higher, and unbroken otherwise.  Devise a strategy to determine the value of `f` such that the number of dropped eggs is minimized.
 
-Exercise III.
+
+
+## Exercise III.
+
 Below is the the pseudo-code for the Quicksort algorithm:
 ```
 function quicksort(array)
