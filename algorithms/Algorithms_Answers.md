@@ -106,6 +106,8 @@ b) Suppose that you have an `n`-story building and plenty of eggs.  Suppose also
 
 ...? `f` should be as large as possible so that the eggs will not break on any floor. It might best that the value of `f` should be ∞, but at least given that `c` is the current floor we're on, have `f` be `f > c`.
 
+If `n` bounds the maximum value of `f`, then `f` should simply be `n`. 
+
 ## Exercise III.
 
 Below is the the pseudo-code for the Quicksort algorithm:

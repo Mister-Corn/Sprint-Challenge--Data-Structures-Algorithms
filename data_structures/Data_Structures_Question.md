@@ -16,6 +16,12 @@ The way I've written the function is O(1). I don't explicity ask for more memory
 
 Runtime complexity is **O(n)**. The function ultimately makes a list and puts every node in it,iterates over it, and performs the CB on each node's value.
 
+**EDIT**
+
+It might be O(n<sup>2</sup>). We have to shift the first element in each loop. Shifting is O(n), which is nested within O(n).
+
+Using a different data structure would improve time complexity, because we certainly don't give a rat's *** about the index of node in our list.
+
 4. What is the space complexity of your `breadth_first_for_each` method?
 
 My best guess is **O(log n)**. I don't think it's appropriate to say it's linear, because the list the function needs to hold will never be as large as the input (*the nodes of the tree*). This is because after the CB is called on the node's value, it's direct children are unpacked, then the node itself gets shifted off the list. 
