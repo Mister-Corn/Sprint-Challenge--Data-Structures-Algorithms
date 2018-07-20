@@ -23,7 +23,7 @@ while (array[i] > x && i >= 0)
   i = i/2;
 ```
 
-Unless `array[i] <= x` stops the loop, I think this will go on forever, because I will never be less than 0. Can we classify this O(∞), for that's its worst case?
+Unless `array[i] <= x` stops the loop, I think this will go on forever, because `i` will never be less than 0. Can we classify this O(∞), for that's its worst case?
 
 ### c)
 
@@ -104,7 +104,7 @@ def find_max(a):
 
 b) Suppose that you have an `n`-story building and plenty of eggs.  Suppose also that an egg is broken if it is thrown off floor `f` or higher, and unbroken otherwise.  Devise a strategy to determine the value of `f` such that the number of dropped eggs is minimized.
 
-
+...? `f` should be as large as possible so that the eggs will not break on any floor. It might best that the value of `f` should be ∞, but at least given that `c` is the current floor we're on, have `f` be `f > c`.
 
 ## Exercise III.
 
