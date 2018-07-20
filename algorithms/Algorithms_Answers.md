@@ -25,6 +25,8 @@ while (array[i] > x && i >= 0)
 
 Unless `array[i] <= x` stops the loop, I think this will go on forever, because `i` will never be less than 0. Can we classify this O(∞), for that's its worst case?
 
+Note: it's O(log n). We'll figure that out later.
+
 ### c)
 
 ```
@@ -37,6 +39,8 @@ for (i = 0; i < Math.sqrt(n) / 2; i++)
 
 O(n<sup>2½</sup>). Maybe.
 
+Note: It's just O(n<sup>½</sup>). The nested loops are constant, because the variables are tied to `i`.
+
 ### d)
 
 ```
@@ -47,6 +51,8 @@ sum = 0;
 ```
 
 Classification is O(n<sup>2</2>). 
+
+Note: it's O(log n * n). 
 
 ### e)
 
